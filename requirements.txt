@@ -1,0 +1,6 @@
+pytest
+pytest-html # 生成html报告
+pytest-xdist # 分布式执行，多CPU分发
+pytest-ordering # 改变执行顺序
+pytest-rerunfailures # 失败重跑
+allure-pytest # 生成报告

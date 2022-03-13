@@ -1,9 +1,15 @@
 import unittest
 
+from ddt import ddt, data
+import requests
 
+
+@ddt
 class TestStringMethods(unittest.TestCase):
 
-    def test_upper(self):
+    @data("qwe", "asd")
+    def test_upper(self, s):
+        print(s)
         self.assertEqual('foo'.upper(), 'FOO')
 
     def test_isupper(self):
@@ -20,6 +26,3 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
