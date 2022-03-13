@@ -4,3 +4,14 @@ pytest-xdist # 分布式执行，多CPU分发
 pytest-ordering # 改变执行顺序
 pytest-rerunfailures # 失败重跑
 allure-pytest # 生成报告
+allure-pytest
+allure-python-commons
+ddt
+Django
+fake-useragent
+openpyxl
+pycryptodome
+PyMySQL
+PyYAML
+requests
+selenium
