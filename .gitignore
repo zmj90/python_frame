@@ -179,6 +179,7 @@ TAGS
 # Jetbrains IDE project files
 /.idea
 /*.iml
+.idea/
 
 # Komodo EDIT/IDE project files
 /*.komodoproject
