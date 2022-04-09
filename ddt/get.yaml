@@ -1,0 +1,17 @@
+---
+method: get
+url: http://$domain/get
+params:
+  name: $id
+  district: $population
+headers:
+  user-id: ${user_id}
+  user-agent: $user_agent
+
+---
+- [Kabul, Kabol]
+- [Qandahar, Qandahar]
+- [Herat, Herat]
+
+---
+url: https://httpbin.org/get

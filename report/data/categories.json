@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert https://httpbin.org/get in 'http://httpbin.org/get?name=1&district=1780000'\nassert 'https://httpbin.org/get' in 'http://httpbin.org/get?name=1&district=1780000'",
+      "children" : [ {
+        "name" : "test_get01[payload0-expect0]",
+        "uid" : "7c227d683e145001",
+        "parentUid" : "84f970dff1bf3b4f0899ae6b09d03f9b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1649515759912,
+          "stop" : 1649515760796,
+          "duration" : 884
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'url': 'https://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
+      } ],
+      "uid" : "84f970dff1bf3b4f0899ae6b09d03f9b"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "testcase",
+    "children" : [ {
+      "name" : "test_01",
+      "children" : [ {
+        "name" : "test_get01[payload0-expect0]",
+        "uid" : "7c227d683e145001",
+        "parentUid" : "dff555ce834ed1ff173d8236931a9a54",
+        "status" : "failed",
+        "time" : {
+          "start" : 1649515759912,
+          "stop" : 1649515760796,
+          "duration" : 884
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'url': 'https://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
+      } ],
+      "uid" : "dff555ce834ed1ff173d8236931a9a54"
+    } ],
+    "uid" : "7d3977dcbf31acd3e26ecbe96342e45e"
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "zmj",
+    "children" : [ {
+      "name" : "87668-MainThread",
+      "children" : [ {
+        "name" : "test_get01[payload0-expect0]",
+        "uid" : "7c227d683e145001",
+        "parentUid" : "37da857d54f7e5878c9e07e99c41c77a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1649515759912,
+          "stop" : 1649515760796,
+          "duration" : 884
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'url': 'https://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
+      } ],
+      "uid" : "37da857d54f7e5878c9e07e99c41c77a"
+    } ],
+    "uid" : "082992b357d43472b29698ca5624e9fe"
+  } ]
+}

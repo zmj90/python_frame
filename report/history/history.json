@@ -1,0 +1,22 @@
+{
+  "0a63a81d48dd2129fd3af3d607e48f88" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7c227d683e145001",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert https://httpbin.org/get in 'http://httpbin.org/get?name=1&district=1780000'\nassert 'https://httpbin.org/get' in 'http://httpbin.org/get?name=1&district=1780000'",
+      "time" : {
+        "start" : 1649515759912,
+        "stop" : 1649515760796,
+        "duration" : 884
+      }
+    } ]
+  }
+}

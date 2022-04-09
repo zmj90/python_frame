@@ -1,0 +1,6 @@
+[32mINFO    [0m:2022/04/09 22:49:19:test_01.py:test_get01:  20:测试开始
+[32mINFO    [0m:2022/04/09 22:49:19:test_01.py:test_get01:  21:输入数据:{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}};预期结果:{'url': 'https://httpbin.org/get'}
+[35mDEBUG   [0m:2022/04/09 22:49:19:connectionpool.py:_new_conn: 227:Starting new HTTP connection (1): httpbin.org:80
+[35mDEBUG   [0m:2022/04/09 22:49:20:connectionpool.py:_make_request: 452:http://httpbin.org:80 "GET /get?name=1&district=1780000 HTTP/1.1" 200 388
+[32mINFO    [0m:2022/04/09 22:49:20:test_01.py:test_get01:  23:响应数据：{'args': {'district': '1780000', 'name': '1'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'chrome', 'User-Id': '45969', 'X-Amzn-Trace-Id': 'Root=1-62519cf1-569d428573a2801b144e9c84'}, 'origin': '117.173.222.222', 'url': 'http://httpbin.org/get?name=1&district=1780000'}
+[1m[31mERROR   [0m:2022/04/09 22:49:20:test_01.py:test_get01:  33:实际结果：http://httpbin.org/get?name=1&district=1780000, 没有包含预期结果：https://httpbin.org/get
