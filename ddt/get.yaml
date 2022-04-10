@@ -4,6 +4,7 @@ url: http://$domain/get
 params:
   name: $id
   district: $population
+  id: $id
 headers:
   user-id: ${user_id}
   user-agent: $user_agent
@@ -14,4 +15,4 @@ headers:
 - [Herat, Herat]
 
 ---
-url: https://httpbin.org/get
+url: http://httpbin.org/get

@@ -2,6 +2,8 @@
 
 """
 import logging
+import time
+from functools import wraps
 
 import pymysql.cursors
 
@@ -28,3 +30,13 @@ class DataBase:
 
 
 db = DataBase
+
+
+def consume_time(test_func):
+    @wraps(test_func)
+    def wrapper(*args):
+        start = time.time()
+        test_func(*args)
+        end = time.time()
+        logging.info(f"执行时间：{end-start}")
+    return wrapper

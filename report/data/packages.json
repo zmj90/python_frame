@@ -5,13 +5,13 @@
     "name" : "testcase.test_01",
     "children" : [ {
       "name" : "test_get01[payload0-expect0]",
-      "uid" : "7c227d683e145001",
+      "uid" : "fa678447d9b6cfb5",
       "parentUid" : "0c89460f465d499e28bdcce403c400d2",
-      "status" : "failed",
+      "status" : "broken",
       "time" : {
-        "start" : 1649515759912,
-        "stop" : 1649515760796,
-        "duration" : 884
+        "start" : 1649569915797,
+        "stop" : 1649569915798,
+        "duration" : 1
       },
       "flaky" : false,
       "newFailed" : false,
@@ -19,7 +19,7 @@
       "newBroken" : false,
       "retriesCount" : 0,
       "retriesStatusChange" : false,
-      "parameters" : [ "{'url': 'https://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
+      "parameters" : [ "{'url': 'http://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000', 'id': '1'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
     } ],
     "uid" : "testcase.test_01"
   } ]

@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "zmj",
     "children" : [ {
-      "name" : "87668-MainThread",
+      "name" : "91468-MainThread",
       "children" : [ {
         "name" : "test_get01[payload0-expect0]",
-        "uid" : "7c227d683e145001",
-        "parentUid" : "37da857d54f7e5878c9e07e99c41c77a",
-        "status" : "failed",
+        "uid" : "fa678447d9b6cfb5",
+        "parentUid" : "fc3a5ee6f2266a53eb8b37f5c2319c62",
+        "status" : "broken",
         "time" : {
-          "start" : 1649515759912,
-          "stop" : 1649515760796,
-          "duration" : 884
+          "start" : 1649569915797,
+          "stop" : 1649569915798,
+          "duration" : 1
         },
         "flaky" : false,
         "newFailed" : false,
@@ -21,9 +21,9 @@
         "newBroken" : false,
         "retriesCount" : 0,
         "retriesStatusChange" : false,
-        "parameters" : [ "{'url': 'https://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
+        "parameters" : [ "{'url': 'http://httpbin.org/get'}", "{'method': 'get', 'url': 'http://httpbin.org/get', 'params': {'name': '1', 'district': '1780000', 'id': '1'}, 'headers': {'user-id': '45969', 'user-agent': 'chrome'}}" ]
       } ],
-      "uid" : "37da857d54f7e5878c9e07e99c41c77a"
+      "uid" : "fc3a5ee6f2266a53eb8b37f5c2319c62"
     } ],
     "uid" : "082992b357d43472b29698ca5624e9fe"
   } ]

@@ -6,6 +6,7 @@ import logging
 
 import config.settings as settings
 from ddt import get
+from utils.utils import consume_time
 
 rs = session()
 
@@ -17,7 +18,6 @@ def test_get01(payload, expect):
 
     :return:
     """
-    logging.info(f"测试开始")
     logging.info(f"输入数据:{payload};预期结果:{expect}")
     res = requests.request(**payload).json()
     logging.info(f"响应数据：{res}")
@@ -33,10 +33,9 @@ def test_get01(payload, expect):
     assert expect["url"] in res["url"], \
         logging.error(f"实际结果：{res['url']}, 没有包含预期结果：{expect['url']}") \
         or f"assert '{expect['url']}' in '{res['url']}'"
-    logging.info(f"测试结束\n")
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_post():
     """
 

@@ -1,11 +1,11 @@
 [ {
-  "uid" : "7c227d683e145001",
+  "uid" : "fa678447d9b6cfb5",
   "name" : "test_get01[payload0-expect0]",
   "time" : {
-    "start" : 1649515759912,
-    "stop" : 1649515760796,
-    "duration" : 884
+    "start" : 1649569915797,
+    "stop" : 1649569915798,
+    "duration" : 1
   },
-  "status" : "failed",
+  "status" : "broken",
   "severity" : "normal"
 } ]
