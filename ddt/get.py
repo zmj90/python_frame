@@ -17,8 +17,8 @@ class GetDate:
         self.db = db(settings.DB[0])
 
     def _get_date(self, args):
-        self.db.execute(query_city, args=args)
-        logging.info(f"sql:{query_city},{args=}")
+        # self.db.execute(query_city, args=args)
+        self.db.execute(query_city, args=args, flag=False)
         _ = self.db.cursor.fetchone()
         logging.info(f"fetchone:{_}")
         return _

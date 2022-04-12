@@ -10,9 +10,10 @@ headers:
   user-agent: $user_agent
 
 ---
-- [Kabul, Kabol]
-- [Qandahar, Qandahar]
-- [Herat, Herat]
+-
+  - [Kabul, Kabol]
+  - [Qandahar, Qandahar]
+  - [Herat, Herat]
 
 ---
 url: http://httpbin.org/get

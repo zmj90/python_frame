@@ -20,8 +20,11 @@ class DataBase:
     def execute(self, sql, args=None, flag=True):
         try:
             if flag:
+                logging.info(self.cursor.mogrify(sql, args))
                 self.cursor.execute(sql, args=args)
             else:
+                for arg in args:
+                    logging.info(self.cursor.mogrify(sql, arg))
                 self.cursor.executemany(sql, args=args)
             self.db.commit()
         except Exception as e:
