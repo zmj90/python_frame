@@ -1,0 +1,17 @@
+---
+method: post
+url: http://$domain/post
+params:
+  id: $all
+  name: $all
+headers:
+  user-id: ${user_id}
+  user-agent: $user_agent
+#  content-type: application/json
+json:
+  - {vend_id: 1001, vend_name: Anvils R Us}
+  - {vend_id: 1002, vend_name: LT Supplies}
+  - {vend_id: 1003, vend_name: ACME}
+
+---
+url: http://localhost:8080/post

@@ -1,6 +1,6 @@
-import os.path as path
+import os
 
-BASE_DIR = path.dirname(path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # print(BASE_DIR)
 # D:\doing\study\demo\python_frame
 DB = [
@@ -23,7 +23,7 @@ DB = [
 ]
 
 domain = {
-    "domain": "httpbin.org"
+    "domain": "localhost:8080"
 }
 
 headers = {
