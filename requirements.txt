@@ -1,17 +1,43 @@
-pytest
-pytest-html # 生成html报告
-pytest-xdist # 分布式执行，多CPU分发
-pytest-ordering # 改变执行顺序
-pytest-rerunfailures # 失败重跑
-pytest-base-url # 基础路径的配置
-allure-pytest # 生成报告
-allure-python-commons
-ddt
-Django
-fake-useragent
-openpyxl
-pycryptodome
-PyMySQL
-PyYAML
-requests
-selenium
+allure-pytest==2.9.45
+allure-python-commons==2.9.45
+asgiref==3.4.1
+atomicwrites==1.4.0
+attrs==21.4.0
+certifi==2021.5.30
+charset-normalizer==2.0.4
+colorama==0.4.4
+ddt==1.4.4
+Deprecated==1.2.13
+Django==4.0.1
+et-xmlfile==1.1.0
+execnet==1.9.0
+fake-useragent==0.1.11
+idna==3.2
+iniconfig==1.1.1
+mylib==0.0.1
+openpyxl==3.0.9
+packaging==21.0
+pluggy==1.0.0
+py==1.10.0
+pycryptodome==3.10.1
+pymongo==4.0.2
+PyMySQL==1.0.2
+pyparsing==2.4.7
+pytest==6.2.5
+pytest-base-url==1.4.2
+pytest-forked==1.4.0
+pytest-html==3.1.1
+pytest-metadata==1.11.0
+pytest-ordering==0.6
+pytest-rerunfailures==10.2
+pytest-xdist==2.5.0
+PyYAML==5.3
+redis==4.1.4
+requests==2.26.0
+selenium==3.141.0
+six==1.16.0
+sqlparse==0.4.2
+toml==0.10.2
+tzdata==2021.2.post0
+urllib3==1.26.6
+wrapt==1.14.0
