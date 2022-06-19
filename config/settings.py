@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # D:\doing\study\demo\python_frame
 DB = [
     {
-        "host": "localhost",
+        "host": "192.168.1.163",
         "port": 3306,
         "user": "root",
         "password": "123456",
@@ -13,7 +13,7 @@ DB = [
         "charset": "utf8"
     },
     {
-        "host": "localhost",
+        "host": "192.168.1.163",
         "port": 3307,
         "user": "root",
         "password": "123456",
@@ -23,7 +23,7 @@ DB = [
 ]
 
 domain = {
-    "domain": "localhost:8080"
+    "domain": "192.168.1.163:8090"
 }
 
 headers = {

@@ -1,3 +1,4 @@
+# api
 ---
 method: post
 url: http://$domain/post
@@ -13,5 +14,8 @@ json:
   - {vend_id: 1002, vend_name: LT Supplies}
   - {vend_id: 1003, vend_name: ACME}
 
+# case
+
+# expect
 ---
-url: http://localhost:8080/post
+url: http://192.168.1.163:8090/post

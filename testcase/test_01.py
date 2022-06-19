@@ -44,7 +44,7 @@ def test_get_vendors(payload, expect):
         or f"assert '{expect['ids']}' in '{_}'"
 
 
-@pytest.mark.skip("不想执行")
+# @pytest.mark.skip("不想执行")
 @pytest.mark.parametrize("payload,expect", con_control.GetDate().load())
 def test_get_method(payload, expect):
     logging.info(f"输入数据:{payload};预期结果:{expect}")
@@ -65,3 +65,35 @@ def test_get_method(payload, expect):
     assert expect["url"] in res["url"], \
         logging.error(f"实际结果：{res['url']}, 没有包含预期结果：{expect['url']}") \
         or f"assert '{expect['url']}' in '{res['url']}'"
+
+
+@pytest.mark.skip
+@pytest.mark.parametrize(
+    "test_input,expected",
+    [
+        ("3+5", 8),
+        pytest.param("6*9", 42, marks=pytest.mark.xfail),
+    ],
+)
+def test_eval(test_input, expected):
+    assert eval(test_input) == expected
+
+
+def f():
+    raise SystemExit(1)
+
+
+@pytest.mark.skip
+def test_my():
+    with pytest.raises(SystemExit):
+        f()
+
+
+@pytest.fixture(params=[0, 1, pytest.param(2, marks=pytest.mark.skip)])
+def data_set(request):
+    return request.param
+
+
+# @pytest.mark.skip
+def test_data(data_set):
+    logging.info(data_set)

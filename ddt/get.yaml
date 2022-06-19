@@ -1,3 +1,4 @@
+# api
 ---
 method: get
 url: http://$domain/get
@@ -7,7 +8,6 @@ params:
   id: $id
   vendors: ${vendors}
   city: 中国
-
 headers:
   user-id: ${user_id}
   user-agent: $user_agent
@@ -16,10 +16,12 @@ data:
   - {id: 2, name: html}
   - {id: 3, name: javascript}
 
+# case
 ---
 - [Kabul, AFG]
 - [Qandahar, AFG]
 - [Herat, AFG]
 
+# expect
 ---
-url: http://localhost:8080/get
+url: http://192.168.1.163:8090/get
