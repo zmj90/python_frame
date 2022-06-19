@@ -1,5 +1,5 @@
 log/*.log
-temps/
+temps/*
 report/
 
 # Byte-compiled / optimized / DLL files
