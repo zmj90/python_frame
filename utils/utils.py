@@ -6,9 +6,13 @@ import logging
 import re
 import time
 from functools import wraps
+from string import Template
 
 import pymysql.cursors
+import requests
 import yaml
+
+from config.settings import EXPECT
 
 
 class DataBase:
@@ -75,6 +79,9 @@ class DataBase:
             res = self.cursor.fetchall()
         logging.debug(f"查询结果：{res}，类型：{type(res)}")
         return res
+
+    def call_proc(self,procedure, args=()):
+        self.cursor.callproc(procedure, args=args)
 
 
 db = DataBase
@@ -149,7 +156,95 @@ class YamlHelper:
             logging.debug(f"获取生成器对象数据：{unpack}")
         return unpack
 
+    @staticmethod
+    def yaml_load(file, mapping=None, **kwargs):
+        """
+
+        :param file:
+        :param mapping:
+        :param kwargs:
+        :return:
+        """
+        if mapping is None:
+            mapping = {}
+        with open(file, "r", encoding="utf8") as f:
+            _ = Template(f.read()).safe_substitute(mapping, **kwargs)
+            _ = yaml.safe_load(_)
+        logging.debug(f"yaml文件序列化为python对象：{_}")
+        return _
+
 
 class ReHelper:
     def __init__(self):
         pass
+
+
+def request(payload, expect=EXPECT, flag=True):
+    """
+
+    :param payload:
+    :param expect:
+    :param flag:
+    :return:
+    """
+    logging.info(f"输入数据：{payload}；预期结果：{expect}")
+    _ = requests.request(**payload)
+    text_, json_ = _.text, _.json()
+    logging.info(f"相应数据：{json_}")
+    logging.info(f"text：{text_}")
+    if flag:
+        return _.status_code, json_
+    return _.status_code, text_, json_
+
+
+def com_assert_bak(code, json_, expect=EXPECT):
+    """
+
+    :param code:
+    :param json_:
+    :param expect:
+    :return:
+    """
+    try:
+        assert json_["status"] == expect["status"]
+        assert json_["errorCode"] == expect["error_code"]
+        assert json_["errorMsg"] == expect["error_msg"]
+    except Exception as e:
+        logging.exception(e)
+        logging.debug(type(e))
+        raise e
+
+
+def com_assert(code, json_, expect=EXPECT):
+    """
+
+    :param code:
+    :param json_:
+    :param expect:
+    :return:
+    """
+    assert code == 200, logging.error(
+        f"实际结果：{code}，没有等于预期结果：200"
+    ) or f"assert '{code} == 200'"
+    assert json_['status'] == expect['status'], logging.error(
+        f"实际结果：{json_['status']}，没有等于预期结果：{expect['status']}"
+    ) or f"assert '{json_['status']}' == '{expect['status']}'"
+    assert json_['errorCode'] == expect['error_code'], logging.error(
+        f"实际结果：{json_['errorCode']}，没有等于预期结果：{expect['error_code']}"
+    ) or f"assert '{json_['errorCode']}' == '{expect['error_code']}'"
+    assert json_['errorMsg'] == expect['error_msg'], logging.error(
+        f"实际结果：{json_['errorMsg']}，没有等于预期结果：{expect['error_msg']}"
+    ) or f"assert '{json_['errorMsg']}' == '{expect['error_msg']}'"
+
+
+def data_assert(actual, expect, fun):
+    """
+
+    :param actual:
+    :param expect:
+    :param fun:
+    :return:
+    """
+    assert fun(actual, expect), logging.error(
+        f"实际结果：'{actual}'，与预期结果'{expect}'不符"
+    ) or f"assert 实际结果：'{actual}'，与预期结果'{expect}'不符"
