@@ -1,6 +1,10 @@
 log/*.log
 temps/*
 report/
+assets/
+
+report.html
+cookies.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

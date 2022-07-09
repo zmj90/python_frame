@@ -1,0 +1,3 @@
+INFO    :2022/06/19 14:27:46:conftest.py:com_down:  11:测试开始
+INFO    :2022/06/19 14:27:46:test_01.py:test_data:  99:0
+INFO    :2022/06/19 14:27:46:conftest.py:com_down:  13:测试结束
