@@ -1,0 +1,12 @@
+#POST /v1/bigpro/contest/operation
+#大大问题关联或取消关联大赛
+method: post
+url: "${idea_manage_service}/v1/bigpro/contest/operation"
+headers:
+  CURRENT_USER_ID: ${CURRENT_USER_ID}
+  productLine: ${productLine}
+  sessionId: "123"
+json:
+  bigProId: ${id}
+  contestId: $contest_id
+  fileId: ""

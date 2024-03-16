@@ -1,0 +1,16 @@
+- id: douban_home_001
+  actions:
+    - action: get
+      param:
+        url: "https://www.douban.com/"
+    - action: click_blank
+      param:
+        by: "link text"
+        value: "豆瓣读书"
+    - action: title
+      expect: "豆瓣读书"
+      symbol: equal
+    - action: close
+    - action: title
+      expect: "豆瓣"
+      symbol: equal

@@ -1,0 +1,16 @@
+- id: douban_book_001
+  actions:
+    - action: get
+      param:
+        url: "https://book.douban.com/"
+    - action: execute_script
+      param:
+        script: "arguments[0].scrollIntoView();"
+        by: "css selector"
+        value: "div.popular-books>div.bd>ul>li:first-of-type img"
+    - action: click
+      param:
+        by: "css selector"
+        value: "div.popular-books>div.bd>ul>li:first-of-type img"
+    - action: title
+      expect: "长安的荔枝 (豆瓣)"

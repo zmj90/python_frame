@@ -1,0 +1,47 @@
+-
+  id: api_test_http_bin.001
+  payload:
+    method: get
+    url: $domain/get
+    params:
+      id: $id
+      title: ${title}
+      city: 中国
+      name: 用例1
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    data:
+      - {id: 1, name: 用例1}
+      - {id: 2, name: html}
+      - {id: 3, name: javascript}
+  handle: YamlPayLoader
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [http://192.168.1.163:8090/get, [re_parse, '"url": "(.*?)"'], in]
+    - ["172.17.0.1", [re_parse, '"origin": "(.*?)"'], ==]
+
+-
+  id: api_test_http_bin.002
+  payload:
+    method: get
+    url: $domain/get
+    params:
+      id: $id
+      title: ${title}
+      city: 中国
+      name: 用例2
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    data:
+      - { id: 1, name: python }
+      - { id: 2, name: html }
+      - { id: 3, name: javascript }
+  handle: YamlPayLoader
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [ http://192.168.1.163:8090/get, [ re_parse, '"url": "(.*?)"' ], in ]
+    - [ "172.17.0.1", [ re_parse, '"origin": "(.*?)"' ], == ]

@@ -1,0 +1,29 @@
+- id: api_test_http_bin.006
+  payload:
+    method: post
+    url: $domain/post
+    params:
+      name: $name
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    #  content-type: application/json
+    json:
+      - { vend_id: 1001, vend_name: Anvils R Us }
+      - { vend_id: 1002, vend_name: LT Supplies }
+      - { vend_id: 1003, vend_name: ACME }
+      - { district: 成都 }
+  handle: YamlPayLoader
+  phl: YamlParamHandler
+  params:
+    text:
+      - [ word, all ]
+    sql_one:
+      - [ name, [ query_name_district ] ]
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [ { query_values: { sql_p: query_vendors, key: vend_id } }, [ re_parses, '"vend_id": (\d+)' ], "==" ]
+    - [ { sql_one: { l_param: [ district, [ query_name_district ] ] } }, [ re_parse, '"district": "(.*?)"' ], == ]
+    - [ http://192.168.1.163:8090/post, [ re_parse, '"url": "(.*?)"' ], in ]
+    - [ "172.17.0.1", [ re_parse, '"origin": "(.*?)"' ], == ]

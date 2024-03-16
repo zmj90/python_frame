@@ -1,0 +1,84 @@
+-
+  id: api_test_http_bin.003
+  payload:
+    method: get
+    url: $domain/get
+    params:
+      name: $id
+      district: $district
+      id: $id
+      vendors: ${vendors}
+      city: 中国
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    data:
+      - {id: 1, name: python}
+      - {id: 2, name: html}
+      - {id: 3, name: javascript}
+  handle: YamlPayLoader
+  phl: YamlParamHandler
+  params:
+    sql:
+      - [query_city, ["Kabul", "AFG"]]
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [ http://192.168.1.163:8090/get, [ re_parse, '"url": "(.*?)"' ], in ]
+    - [ "172.17.0.1", [ re_parse, '"origin": "(.*?)"' ], == ]
+-
+  id: api_test_http_bin.004
+  payload:
+    method: get
+    url: $domain/get
+    params:
+      name: $id
+      district: $district
+      id: $id
+      vendors: ${vendors}
+      city: 中国
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    data:
+      - {id: 1, name: python}
+      - {id: 2, name: html}
+      - {id: 3, name: javascript}
+  handle: YamlPayLoader
+  phl: YamlParamHandler
+  params:
+    sql:
+      - [query_city, ["Qandahar", "AFG"]]
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [ http://192.168.1.163:8090/get, [ re_parse, '"url": "(.*?)"' ], in ]
+    - [ "172.17.0.1", [ re_parse, '"origin": "(.*?)"' ], == ]
+-
+  id: api_test_http_bin.005
+  payload:
+    method: get
+    url: $domain/get
+    params:
+      name: $id
+      district: $district
+      id: $id
+      vendors: ${vendors}
+      city: 中国
+    headers:
+      user-id: "${user_id}"
+      user-agent: $user_agent
+    data:
+      - {id: 1, name: python}
+      - {id: 2, name: html}
+      - {id: 3, name: javascript}
+  handle: YamlPayLoader
+  phl: YamlParamHandler
+  params:
+    sql:
+      - [query_city, ["Herat", "AFG"]]
+  assert: data_assert
+  ahl: AssertHandler
+  compare:
+    - [ http://192.168.1.163:8090/get, [ re_parse, '"url": "(.*?)"' ], in ]
+    - [ "172.17.0.1", [ re_parse, '"origin": "(.*?)"' ], == ]

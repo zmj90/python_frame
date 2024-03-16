@@ -1,0 +1,6 @@
+[url]
+"gamma86.url" = "mongodb://rwuser:Tatai#libing2021@10.28.25.86:8635"
+["gamma86.url.db"]
+idea_config_gama = "idea_config_gama"
+["idea_config_gama.col"]
+institute = "institute"

@@ -1,0 +1,14 @@
+assets/
+log
+temp
+report
+
+run.py
+failures
+
+/lib
+
+# Jetbrains IDE project files
+/.idea
+/*.iml
+.idea/

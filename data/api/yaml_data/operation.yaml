@@ -1,0 +1,8 @@
+method: post
+url: $domain/post
+headers:
+  user-id: "${user_id}"
+  user-agent: $user_agent
+json:
+  bigProId: ${id}
+  contestId: $contest_id

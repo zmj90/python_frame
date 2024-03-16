@@ -1,0 +1,5 @@
+[applicable-scope-config]
+applicableScope = "/v1/common/config/applicableScope"  # 获取所有适用范围配置
+[common-config-controller]
+getInstitute = "/v1/common/config/getInstitute"  # 查询研究中心
+saveInstitute = "/v1/common/config/saveInstitute"  # 研究中心-添加

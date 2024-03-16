@@ -1,0 +1,146 @@
+# 已发布创新课题(已关联大赛::关联idea已参赛)变更关联大赛
+- case_id: big_problem_associative_contest_002
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 0
+
+# 已发布创新课题(已关联大赛::关联idea已参赛)取消关联大赛
+- case_id: big_problem_associative_contest_003
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 0
+  contest_id: -1
+
+# 解决中创新课题(已关联大赛::关联idea已参赛)变更关联大赛
+- case_id: big_problem_associative_contest_004
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 1
+
+# 解决中创新课题(已关联大赛::关联idea已参赛)取消关联大赛
+- case_id: big_problem_associative_contest_005
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 1
+  contest_id: -1
+
+# 已发布创新课题(已关联大赛::未关联idea)变更关联大赛
+- case_id: big_problem_associative_contest_006
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 2
+
+# 已发布创新课题(已关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_007
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 2
+  reset: 1
+  contest_id: -1
+
+# 已发布创新课题(未关联大赛::关联idea已参赛)关联大赛
+- case_id: big_problem_associative_contest_008
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 3
+  "xfail": true
+
+# 已发布创新课题(未关联大赛::关联idea已参赛)取消关联大赛
+- case_id: big_problem_associative_contest_009
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 3
+  reset: 3
+  contest_id: -1
+  "xfail": true
+
+# 解决中创新课题(未关联大赛::关联idea已参赛)关联大赛
+- case_id: big_problem_associative_contest_010
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 4
+
+# 解决中创新课题(未关联大赛::关联idea已参赛)取消关联大赛
+- case_id: big_problem_associative_contest_011
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 4
+  reset: 3
+  contest_id: -1
+
+# 已发布创新课题(未关联大赛::关联idea未参赛)关联大赛
+- case_id: big_problem_associative_contest_012
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 5
+
+# 已发布创新课题(未关联大赛::关联idea未参赛)取消关联大赛
+- case_id: big_problem_associative_contest_013
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 5
+  reset: 2
+  contest_id: -1
+
+# 解决中创新课题(未关联大赛::关联idea未参赛)关联大赛
+- case_id: big_problem_associative_contest_014
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 6
+
+# 解决中创新课题(未关联大赛::关联idea未参赛)取消关联大赛
+- case_id: big_problem_associative_contest_015
+  expect: {status: 200, error_code: 600109999, error_msg: 大问题关联的IDEA已参加创新大赛！不允许退赛！}
+  "no": 6
+  reset: 2
+  contest_id: -1
+
+# 已发布创新课题(未关联大赛::未关联idea)关联大赛
+- case_id: big_problem_associative_contest_016
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 7
+
+# 已发布创新课题(未关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_017
+  expect: {status: 200, error_code: 0, error_msg: ~}
+  "no": 7
+  contest_id: -1
+
+# 待提交创新课题(未关联大赛::未关联idea)关联大赛
+- case_id: big_problem_associative_contest_018
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 8
+  "xfail": true
+
+# 待提交创新课题(未关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_019
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 8
+  contest_id: -1
+  "xfail": true
+
+# 待评审创新课题(未关联大赛::未关联idea)关联大赛
+- case_id: big_problem_associative_contest_020
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 9
+  "xfail": true
+
+# 待评审创新课题(未关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_021
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 9
+  contest_id: -1
+  "xfail": true
+
+# 待关闭审核创新课题(未关联大赛::未关联idea)关联大赛
+- case_id: big_problem_associative_contest_022
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 10
+  "xfail": true
+
+# 待关闭审核创新课题(未关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_023
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 10
+  contest_id: -1
+  "xfail": true
+
+# 关闭的创新课题(未关联大赛::未关联idea)关联大赛
+- case_id: big_problem_associative_contest_024
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 11
+  "xfail": true
+
+# 关闭的创新课题(未关联大赛::未关联idea)取消关联大赛
+- case_id: big_problem_associative_contest_025
+  expect: {status: 200, error_code: 0, error_msg: 只有已发布或解决中的大问题可以关联大赛}
+  "no": 11
+  contest_id: -1
+  "xfail": true
